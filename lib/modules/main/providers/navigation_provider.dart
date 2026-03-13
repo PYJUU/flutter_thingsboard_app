@@ -9,6 +9,7 @@ import 'package:thingsboard_app/config/routes/v2/router_2.dart';
 import 'package:thingsboard_app/core/auth/login/models/login_state.dart';
 import 'package:thingsboard_app/core/auth/login/provider/login_provider.dart';
 import 'package:thingsboard_app/core/logger/tb_logger.dart';
+import 'package:thingsboard_app/generated/l10n.dart';
 import 'package:thingsboard_app/modules/main/model/navigation_item_data.dart';
 import 'package:thingsboard_app/modules/main/model/navigation_state.dart';
 import 'package:thingsboard_app/modules/main/providers/navigation_helper.dart';
@@ -116,13 +117,13 @@ class Navigation extends _$Navigation {
             null;
     final more =
         shouldAddProfile
-            ? const NavigationItemData(
-              title: 'Profile',
+            ? NavigationItemData(
+              title: S.current.profile,
               icon: Icons.person,
               path: fullScreenProfile,
             )
-            : const NavigationItemData(
-              title: 'More',
+            : NavigationItemData(
+              title: S.current.more,
               icon: Icons.menu_outlined,
               path: '/more',
             );

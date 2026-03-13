@@ -9,7 +9,7 @@
       }
     }
   },
-  "devices": "{count, plural, =1{Device} other{Devices}}",
+  "devices": "{count, plural, =1{設備} other{設備}}",
   "@devices": {
     "placeholders": {
       "count": {
@@ -180,7 +180,7 @@
     }
   },
   "deviceList": "設備清單",
-  "dashboards": "{count, plural, =1{Dashboard} other{Dashboards}}",
+  "dashboards": "{count, plural, =1{儀表板} other{儀表板}}",
   "@dashboards": {
     "placeholders": {
       "count": {
@@ -243,8 +243,8 @@
       }
     }
   },
-  "reset": "Reset",
-  "update": "Update",
+  "reset": "重設",
+  "update": "更新",
   "alarmTypeList": "Alarm type list",
   "anyType": "Any type",
   "plusAlarmType": "+ Alarm type",
@@ -256,7 +256,7 @@
   "unknownError": "Unknown error.",
   "fatalApplicationErrorOccurred": "Fatal application error occurred:",
   "connectionError": "Connection error",
-  "failedToConnectToServer": "Failed to connect to server",
+  "failedToConnectToServer": "連線到伺服器失敗",
   "retry": "Retry",
   "mobileDashboardShouldBeConfiguredInDeviceProfile": "Mobile dashboard should be configured in device profile!",
   "openWifiSettings": "Open Wi-Fi settings",
@@ -266,7 +266,7 @@
   "pushNotificationsAreNotConfiguredpleaseContactYourSystemAdministrator": "Push notifications are not configured.\nPlease contact your system administrator.",
   "firebaseIsNotConfiguredPleaseReferToTheOfficialFirebase": "Firebase is not configured.\n Please refer to the official Firebase documentation for\n guidance on how to do so.",
   "markAllAsRead": "Mark all as read",
-  "profile": "Profile",
+  "profile": "個人資料",
   "cantLaunchUrlLink": "Can't launch url: {link}",
   "@cantLaunchUrlLink": {
     "placeholders": {
@@ -295,8 +295,8 @@
   "url": "Url",
   "pleaseScanQrCodeOnYourDevice": "Please scan QR code on your device",
   "search": "Search",
-  "tenant": "Tenant",
-  "tenantProfile": "Tenant profile",
+  "tenant": "租戶",
+  "tenantProfile": "租戶設定檔",
   "user": "User",
   "asset": "Asset",
   "deviceProfile": "設備設定檔",
@@ -362,7 +362,7 @@
   "youHaveUnsavedChangesAreYouSureYouWantTo": "You have unsaved changes. Are you sure you want to leave this page?",
   "deleteAccount": "Delete account",
   "accountDeletionDialogBody": "Are you sure? You are going to delete your {authority} account.",
-  "language": "Language",
+  "language": "語言",
   "metricUnitSystem": "Metric",
   "imperialUnitSystem": "Imperial",
   "hybridUnitSystem": "Hybrid",
@@ -370,7 +370,7 @@
   "unitSystem": "Unit system",
   "selectCountry": "Select country",
   "hideHomeDashboardToolbar": "Hide home dashboard toolbar",
-  "phoneNumberHelperText": "Phone Number in E.164 format, ex. +1201550123",
+  "phoneNumberHelperText": "E.164 格式電話號碼，例如：+1201550123",
   "homeDashboard": "Home dashboard",
   "security": "Security",
   "twofactorAuthentication": "Two-factor authentication",
@@ -380,7 +380,7 @@
   "setUpAVerificationMethod": "Set up a verification method",
   "totpSetupSuccessDescription": "The next time you log in, you will need to provide a two-factor authentication code",
   "smsSetupSuccessDescription": "The next time you log in, you will be prompted to enter the security code that will be sent to the phone number",
-  "emailSetupSuccessDescription": "The next time you log in, you will be prompted to enter the security code that will be sent to your email address",
+  "emailSetupSuccessDescription": "下次登入時，系統會要求您輸入寄送到電子郵件的安全碼",
   "backupCodeSetupSuccessDescription": "The next time you log in, you will be able to use backup codes to pass two factor authentification",
   "loginToApp": "Login to app",
   "goBack": "Go back",
@@ -409,17 +409,17 @@
   "twofactorAuthenticationProtectsYourAccountFromUnauthorizedAccessAllYou": "Two-factor authentication protects your account from unauthorized access. All you have to do is enter a security code when you log in.",
   "cantDeleteUserAccount": "Can\\'t delete user account",
   "calculatedField": "Calculated field",
-  "apiKey": "Api key",
+  "apiKey": "API金鑰",
   "aiModel": "Ai model",
   "adminSettings": "Admin settings",
   "job": "Job",
   "mobileAppBundle": "Mobile app bundle",
   "mobileApp": "Mobile app",
   "domain": "Domain",
-  "oauth2Client": "Oauth2 client",
+  "oauth2Client": "OAuth2 用戶端",
   "queueStats": "Queue stats",
   "phoneIsRequired": "Phone is required",
-  "phoneIsInvalid": "Phone is invalid",
+  "phoneIsInvalid": "電話號碼無效",
   "addVerificationMethod": "Add verification method",
   "areYouSureYouWantToExit": "Are you sure you want to exit?",
   "confirmToCloseTheApp": "Confirm to close the app"

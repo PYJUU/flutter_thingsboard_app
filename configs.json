@@ -1,0 +1,9 @@
+{
+  "thingsboardApiEndpoint": "http://thingsboard.newinte.top:8080",
+  "appLinksUrlHost": "thingsboard.newinte.top:8080",
+  "appLinksUrlScheme": "http",
+  "androidApplicationId": "thingsboard.apk",
+  "androidApplicationName": "ThingsBoard App",
+  "thingsboardOAuth2CallbackUrlScheme": "thingsboard.apk.auth",
+  "thingsboardAndroidAppSecret": "NjRoZWluSzh1eVJQTW51RWV2U3NCNnBJclNHc096QUExRENRanhyelNkeld3Z0ZXY2RNWmdxYmc4eFQ1cVRpeg=="
+}

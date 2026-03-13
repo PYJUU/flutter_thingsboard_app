@@ -92,7 +92,7 @@ class Login extends _$Login {
       (l) => l.toString() == lang.toString().split('_')[0],
     );
 
-    await S.load(locale ?? const Locale('en'));
+    await S.load(locale ?? const Locale('zh', 'CN'));
 
     state = state.copyWith(
       isUserLoaded: true,

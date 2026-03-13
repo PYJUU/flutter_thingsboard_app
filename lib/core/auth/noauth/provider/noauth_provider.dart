@@ -32,7 +32,7 @@ class NoauthProvider extends _$NoauthProvider {
     final _client = getIt<ITbClientService>().client;
     try {
       final uri = params.data.uri;
-      final host = params.data.host ?? uri.origin;
+      final host = _normalizeHost(params.data.host ?? uri.origin);
       final key = params.data.secret;
       final currentEndpoint = await getIt<IEndpointService>().getEndpoint();
       final isTheSameHost =
@@ -167,6 +167,30 @@ class NoauthProvider extends _$NoauthProvider {
       },
     );
   }
+}
+
+
+String _normalizeHost(String input) {
+  final trimmedInput = input.trim();
+  if (trimmedInput.isEmpty) {
+    throw const FormatException('Host is empty');
+  }
+
+  final withScheme =
+      trimmedInput.startsWith('http://') || trimmedInput.startsWith('https://')
+          ? trimmedInput
+          : 'https://$trimmedInput';
+  final uri = Uri.tryParse(withScheme);
+
+  if (uri == null || uri.host.isEmpty) {
+    throw const FormatException('Invalid host format');
+  }
+
+  if (uri.scheme != 'http' && uri.scheme != 'https') {
+    throw const FormatException('Unsupported host scheme');
+  }
+
+  return uri.origin;
 }
 
 class NoAuthState {

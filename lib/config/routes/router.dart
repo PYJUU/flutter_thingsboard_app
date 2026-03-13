@@ -63,16 +63,31 @@ class ThingsboardAppRouter {
   }
 
   Future<void> navigateByAppLink(String? link) async {
-    if (link != null) {
-      final uri = Uri.parse(link);
-      await getIt<ILocalDatabaseService>().deleteInitialAppLink();
-      log.debug('TbContext: navigate by appLink $uri');
-      navigateTo(
-        uri.path,
-        routeSettings: RouteSettings(
-          arguments: {...uri.queryParameters, 'uri': uri},
-        ),
-      );
+    if (link == null || link.trim().isEmpty) {
+      return;
     }
+
+    final uri = Uri.tryParse(link.trim());
+    if (uri == null || uri.path.isEmpty) {
+      log.warning('TbContext: ignore malformed appLink: $link');
+      return;
+    }
+
+    if (uri.hasScheme &&
+        uri.scheme.isNotEmpty &&
+        uri.scheme != 'http' &&
+        uri.scheme != 'https') {
+      log.warning('TbContext: ignore unsupported appLink scheme: ${uri.scheme}');
+      return;
+    }
+
+    await getIt<ILocalDatabaseService>().deleteInitialAppLink();
+    log.debug('TbContext: navigate by appLink $uri');
+    navigateTo(
+      uri.path,
+      routeSettings: RouteSettings(
+        arguments: {...uri.queryParameters, 'uri': uri},
+      ),
+    );
   }
 }

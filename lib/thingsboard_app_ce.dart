@@ -32,6 +32,7 @@ class ThingsboardApp extends HookConsumerWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: S.delegate.supportedLocales,
+          locale: const Locale('zh', 'CN'),
           onGenerateTitle: (BuildContext context) => S.of(context).appTitle,
           themeMode: ThemeMode.light,
           theme: tbCeTheme,
